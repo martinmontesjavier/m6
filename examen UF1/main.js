@@ -35,7 +35,6 @@ const menus = [
   // Evento insertado en el documento inicializado en el momento en el que carga
   document.addEventListener("DOMContentLoaded", function () {
     const selectorDia = document.getElementById("selectorDia");
-    const palabra = document.getElementById("buscador").value;
     const menuContainer = document.getElementById("menu");
 
     
@@ -137,6 +136,7 @@ const menus = [
       const horaCerrarInt = parseInt(arrayHoraCerrar[0]);
       const minutosCerrarInt = parseInt(arrayHoraCerrar[1]);
       /*
+      VERSION SOLO HORAS
       if (horaAperturaInt>horaCerrarInt){
         const horasTrabajo = horaAperturaInt - horaCerrarInt; 
         const horasFaltantes = 24 - horasTrabajo
@@ -148,19 +148,22 @@ const menus = [
       }
       */    
       if (horaAperturaInt > horaCerrarInt) {
-        const horasTrabajo = (24 + horaAperturaInt - horaCerrarInt) % 24;
-        const minutosTrabajo = (60 + minutosAperturaInt - minutosCerrarInt) % 60;
+        let horasTrabajo = (24 + horaAperturaInt - horaCerrarInt) % 24;
+        let minutosTrabajo = (60 + minutosAperturaInt - minutosCerrarInt) % 60;
 
-        // const horasTrabajo = 24 - (horaAperturaInt - horaCerrarInt);
-        // const minutosTrabajo = 60 - (minutosAperturaInt - minutosCerrarInt);
+        if(minutosTrabajo>1){
+          horasTrabajo=horasTrabajo-1
+          console.log(horasTrabajo)
+        }
 
         horaFinal.innerHTML = `Faltan: ${horasTrabajo} horas y ${minutosTrabajo} minutos para abrir desde la hora del cierre`;
       } else {
-        const horasTrabajo = (24 + horaCerrarInt - horaAperturaInt) % 24;
-        const minutosTrabajo = (60 + minutosCerrarInt - minutosAperturaInt) % 60;
-
-        // const horasTrabajo = 24 - (horaCerrarInt - horaAperturaInt);
-        // const minutosTrabajo = 60 - (minutosCerrarInt - minutosAperturaInt);
+        let horasTrabajo = (24 + horaCerrarInt - horaAperturaInt) % 24;
+        let minutosTrabajo = (60 + minutosCerrarInt - minutosAperturaInt) % 60;
+        if(minutosTrabajo>1){
+          horasTrabajo=horasTrabajo-1
+          console.log(horasTrabajo)
+        }
 
         horaFinal.innerHTML = `Faltan: ${horasTrabajo} horas y ${minutosTrabajo} minutos para abrir desde la hora del cierre.`;
       }
