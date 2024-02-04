@@ -329,179 +329,20 @@ export const juego = {
 			</div>
     `,
     script:()=>{
-		const models = [
-			{
-				nombre: "Palo",
-				color: "Azul",
-				matriz: [
-					[
-						[1],
-						[1],
-						[1],
-						[1]
-					],
-					[
-						[1,1,1,1]
-					],
-					[
-						[1],
-						[1],
-						[1],
-						[1]
-					],
-					[
-						[1,1,1,1]
-					]
-				]
-			},
-			{
-				nombre: "L",
-				color: "Morado",
-				matriz: [
-					[
-						[1,0],
-						[1,0],
-						[1,0],
-						[1,1]
-					],
-					[
-						[1,1,1,1],
-						[1,0,0,0]
-					],
-					[
-						[1,1],
-						[0,1],
-						[0,1],
-						[0,1]
-					],
-					[
-						[0,0,0,1],
-						[1,1,1,1]
-					]
-				]
-			},
-			{
-				nombre: "L invertida",
-				color: "Celeste",
-				matriz: [
-					[
-						[0,1],
-						[0,1],
-						[0,1],
-						[1,1]
-					],
-					[
-						[1,0,0,0],
-						[1,1,1,1]
-					],
-					[
-						[1,1],
-						[1,0],
-						[1,0],
-						[1,0]
-					],
-					[
-						[1,1,1,1],
-						[0,0,0,1]
-					]
-				]
-			},
-			{
-				nombre: "Z",
-				color: "Verde",
-				matriz: [
-					[
-						[1,1,0],
-						[0,1,1]
-					],
-					[
-						[0,1],
-						[1,1],
-						[1,0]
-					],
-					[
-						[1,1,0],
-						[0,1,1]
-					],
-					[
-						[0,1],
-						[1,1],
-						[1,0]
-					]
-				]
-			},
-			{
-				nombre: "Z invertida",
-				color: "Rojo",
-				matriz: [
-					[
-						[0,1,1],
-						[1,1,0]
-					],
-					[
-						[1,0],
-						[1,1],
-						[0,1]
-					],
-					[
-						[0,1,1],
-						[1,1,0]
-					],
-					[
-						[1,0],
-						[1,1],
-						[0,1]
-					]
-				]
-			},
-			{
-				nombre: "Cuadrado",
-				color: "Amarillo",
-				matriz: [
-					[
-						[1,1],
-						[1,1]
-					],
-					[
-						[1,1],
-						[1,1]
-					],
-					[
-						[1,1],
-						[1,1]
-					],
-					[
-						[1,1],
-						[1,1]
-					]
-				]
-			},
-			{
-				nombre: "T",
-				color: "Naranja",
-				matriz: [
-					[
-						[1,1,1],
-						[0,1,0]
-					],
-					[
-						[0,1],
-						[1,1],
-						[0,1]
-					],
-					[
-						[0,1,0],
-						[1,1,1]
-					],
-					[
-						[1,0],
-						[1,1],
-						[1,0]
-					]
-				]
-			}
-		]
+		
 
-		document.querySelector("#panel")
+		const divPanel = document.querySelector("#panel")
+
+		divPanel.innerHTML = panel.pintaPanel()
+
+		panel.crearNuevaPieza()
+
+		
+		panel.nuevaPieza = panel.crearNuevaPieza()
+		panel.insertarPieza(panel.nuevaPieza)
+		
+		panel.controlTecla()
+		// divPanel.innerHTML = panel.pintaPanel()
+
     }
 }
