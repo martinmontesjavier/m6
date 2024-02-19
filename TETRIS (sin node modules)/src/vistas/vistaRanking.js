@@ -1,3 +1,5 @@
+import { panel } from "./panel";
+
 export const ranking = {
     template: `
     <button id="boton" class="btn btn-success fs-1 mt-5">JUGAR</button>
@@ -409,7 +411,7 @@ const datosEjemploPartida = {
 pintaTabla(partides)
 // insertaNuevaPartida(datosEjemploPartida)
 
-pintaDatosPartida(datosEjemploPartida)
+pintaDatosPartida(panel.partidaGuardada)
 
 function pintaRanking(event){
     event.preventDefault()
@@ -487,6 +489,8 @@ function insertaNuevaPartida(datosEjemploPartida) {
 	
 	
 }
+
+
 
 function pintaDatosPartida(partida){
 	const mensaje=`Quieres guardar la partida?

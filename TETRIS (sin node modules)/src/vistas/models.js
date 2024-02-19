@@ -1,7 +1,7 @@
 export const models = [
     {
         nombre: "Palo",
-        color: "Azul",
+        color: "bg-primary bg-gradient",
         matriz: [
             [
                 [1],
@@ -25,7 +25,7 @@ export const models = [
     },
     {
         nombre: "L",
-        color: "Morado",
+        color: "bg-secondary bg-gradient",
         matriz: [
             [
                 [1,0],
@@ -51,7 +51,7 @@ export const models = [
     },
     {
         nombre: "L invertida",
-        color: "Celeste",
+        color: "bg-success bg-gradient",
         matriz: [
             [
                 [0,1],
@@ -77,7 +77,7 @@ export const models = [
     },
     {
         nombre: "Z",
-        color: "Verde",
+        color: "bg-danger bg-gradient",
         matriz: [
             [
                 [1,1,0],
@@ -101,7 +101,7 @@ export const models = [
     },
     {
         nombre: "Z invertida",
-        color: "Rojo",
+        color: "bg-warning bg-gradient",
         matriz: [
             [
                 [0,1,1],
@@ -125,7 +125,7 @@ export const models = [
     },
     {
         nombre: "Cuadrado",
-        color: "Amarillo",
+        color: "bg-light",
         matriz: [
             [
                 [1,1],
@@ -147,7 +147,7 @@ export const models = [
     },
     {
         nombre: "T",
-        color: "Naranja",
+        color: "bg-info bg-gradient",
         matriz: [
             [
                 [1,1,1],

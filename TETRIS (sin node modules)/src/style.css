@@ -99,3 +99,7 @@ button:focus-visible {
   height: 40px;
   border: 1px solid;
 }
+#juego{
+  width: 99%;
+  zoom: 0.8;
+}
